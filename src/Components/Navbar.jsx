@@ -1,77 +1,85 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
 
   return (
     <nav className="navbar text-gray-600 body-font bg-black mx-auto">
-      <div className="xl:mx-auto xl:max-w-7xl max-w-full mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center ">
+      <div className="xl:mx-auto xl:max-w-7xl max-w-full mx-auto flex flex-wrap p-3 flex-col md:flex-row  ">
         <div>
-          <Link to="" smooth duration={500}>
-            <h1 className="ml-3 text-3xl text-white">Chalo</h1>
-          </Link>
-
+          <div className="flex">
+            <div className="md:hidden">
+              <button
+                className="text-white p-2 rounded-full border-r-2 "
+                onClick={() => setNav(!nav)}
+              >
+                {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+              </button>
+            </div>
+            <NavLink to="/home" smooth duration={500}>
+              <h1 className="mt-1 ml-2 text-3xl text-white">Chalo</h1>
+            </NavLink>
+          </div>
         </div>
 
         <ul className="hidden md:flex ">
-          <li className="px-4 cursor-pointer">
-            <Link
-              to=""
+          <li className="px-2 cursor-pointer">
+            <NavLink
+              to="/chaloapp"
               smooth
               duration={500}
-              className="mr-5  text-xl text-white hover:bg-gray-700 rounded-3xl p-2"
+              className="mr-3  text-xl text-white hover:bg-gray-700 rounded-3xl p-2"
             >
               Chalo App
-            </Link>
+            </NavLink>
           </li>
           <li className="px-2  cursor-pointer">
-            <Link
-              to=""
+            <NavLink
+              to="/chalocard"
               smooth
               duration={500}
-              className="mr-5 text-xl  text-white hover:bg-gray-700 rounded-3xl p-2"
+              className="mr-3 text-xl  text-white hover:bg-gray-700 rounded-3xl p-2"
             >
               Chalo Card
-            </Link>
+            </NavLink>
           </li>
           <li className="px-2 cursor-pointer">
-            <Link
-              to=""
+            <NavLink
+              to="/mobilepass"
               smooth
               duration={500}
-              className="mr-5 text-xl  text-white hover:bg-gray-700 rounded-3xl p-2"
+              className="mr-3 text-xl  text-white hover:bg-gray-700 rounded-3xl p-2"
             >
               Mobile Pass
-            </Link>
+            </NavLink>
           </li>
           <li className="px-2 cursor-pointer">
-            <Link
-              to=""
+            <NavLink
+              to="/mobileticket"
               smooth
               duration={500}
-              className="mr-5 text-xl  text-white hover:bg-gray-700 rounded-3xl p-2"
+              className="mr-3 text-xl  text-white hover:bg-gray-700 rounded-3xl p-2"
             >
               Mobile Ticket
-            </Link>
+            </NavLink>
           </li>
-          
         </ul>
 
-        <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-          <button className=" items-center hidden md:flex bg-gray-100 font-semibold p-3  focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-4 md:mt-0">
+        <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0 gap-2">
+          <NavLink to="/login">
+            <button className=" items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
+              Login
+            </button>
+          </NavLink>
+          <NavLink to="/signup">
+            <button className=" items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
+              Signup
+            </button>
+          </NavLink>
+          <button className=" items-center hidden md:flex bg-gray-100 font-semibold py-2 px-3  focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-4 md:mt-0">
             Download App
-          </button>
-        </div>
-        
-
-        <div className="md:hidden">
-          <button
-            className="text-gray-500 p-2 focus:outline-none "
-            onClick={() => setNav(!nav)}
-          >
-            {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
           </button>
         </div>
       </div>
@@ -79,47 +87,67 @@ const Nav = () => {
       {nav && (
         <ul className="md:hidden flex flex-col justify-start items-start ml-4 pb-5 top-20 left-0 bg-black text-white">
           <li className="text-xl cursor-pointer">
-            <Link to="" smooth duration={500} onClick={() => setNav(false)}>
+            <NavLink to="" smooth duration={500} onClick={() => setNav(false)}>
               Chalo App
               <ul className="text-base pt-2 ml-5">
-                <li className="py-1">Track Your Bus Live</li>
-                <li className="py-1">Mobile Bus Pass</li>
-                <li className="py-1">Mobile Ticket</li>
+                <li className="py-1">
+                  <NavLink to="">Track Your Bus Live</NavLink>
+                </li>
+                <li className="py-1">
+                  <NavLink to="/mobilepass">Mobile Bus Pass</NavLink>
+                </li>
+                <li className="py-1">
+                  <NavLink to="/mobileticket">Mobile Bus Ticket</NavLink>
+                </li>
               </ul>
-            </Link>
-            
+            </NavLink>
           </li>
           <li className="py-2 text-xl cursor-pointer">
-            <Link to="" smooth duration={500} onClick={() => setNav(false)}>
+            <NavLink
+              to="/chalocard"
+              smooth
+              duration={500}
+              onClick={() => setNav(false)}
+            >
               Chalo Card
-            </Link>
+            </NavLink>
           </li>
           <li className="py-2 text-xl cursor-pointer">
-            <Link to="" smooth duration={500} onClick={() => setNav(false)}>
+            <NavLink to="/" smooth duration={500} onClick={() => setNav(false)}>
               Chalo Bus
-            </Link>
+            </NavLink>
           </li>
           <li className="py-2 text-xl cursor-pointer">
-            <Link to="" smooth duration={500} onClick={() => setNav(false)}>
+            <NavLink to="" smooth duration={500} onClick={() => setNav(false)}>
               Super Saver
-            </Link>
+            </NavLink>
           </li>
           <li className="py-2 text-xl cursor-pointer">
-            <Link to="" smooth duration={500} onClick={() => setNav(false)}>
+            <NavLink to="" smooth duration={500} onClick={() => setNav(false)}>
               Chalo Cities
-            </Link>
+            </NavLink>
           </li>
           <li className="py-2 text-xl cursor-pointer underline">
-            <Link to="" smooth duration={500} onClick={() => setNav(false)}>
+            <NavLink to="" smooth duration={500} onClick={() => setNav(false)}>
               Try Chalo
-            </Link>
+            </NavLink>
           </li>
           <li>
-          <div className="lg:w-2/5 inline-flex lg:justify-center  lg:ml-0">
-          <button className=" items-center  bg-gray-100 font-semibold p-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
-            Download App
-          </button>
-        </div>
+            <div className="lg:w-2/5 inline-flex lg:justify-center gap-2 lg:ml-0">
+              <NavLink to="/login">
+                <button className=" items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
+                  Login
+                </button>
+              </NavLink>
+              <NavLink to="/login">
+                <button className=" items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
+                  LoginSignup
+                </button>
+              </NavLink>
+              <button className=" items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
+                Download App
+              </button>
+            </div>
           </li>
         </ul>
       )}

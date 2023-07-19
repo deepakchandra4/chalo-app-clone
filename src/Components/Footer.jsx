@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagram , FaYoutube , FaLinkedin } from "rea
 
 const Footer = () => {
   return (
-    <div className="bg-stone-900  grid max-lg:grid-cols-1 max-sm:grid-cols-1  grid-cols-3 gap-0">
+    <div className="bg-stone-900  grid max-lg:grid-cols-1 max-sm:grid-cols-1  grid-cols-3 gap-0 ">
       <div className=" text-white flex-col max-md:p-6 max-lg:p-7 p-20">
         <h1 className=" text-4xl font-medium pt-10 pb-4">Contact Us</h1>
         <span className=" font-medium">Our offices</span>

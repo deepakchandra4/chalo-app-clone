@@ -69,12 +69,12 @@ const Nav = () => {
 
         <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0 gap-2">
           <NavLink to="/login">
-            <button className=" items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
+            <button className=" hidden md:flex items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
               Login
             </button>
           </NavLink>
           <NavLink to="/signup">
-            <button className=" items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
+            <button className=" items-center hidden md:flex bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
               Signup
             </button>
           </NavLink>
@@ -139,9 +139,9 @@ const Nav = () => {
                   Login
                 </button>
               </NavLink>
-              <NavLink to="/login">
+              <NavLink to="/signup">
                 <button className=" items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
-                  LoginSignup
+                  Signup
                 </button>
               </NavLink>
               <button className=" items-center  bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">

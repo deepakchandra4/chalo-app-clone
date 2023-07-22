@@ -27,7 +27,7 @@ const Nav = () => {
         <ul className="hidden md:flex ">
           <li className="px-2 cursor-pointer">
             <NavLink
-              to="/chaloapp"
+              to="/chalo-app"
               smooth
               duration={500}
               className="mr-3  text-xl text-white hover:bg-gray-700 rounded-3xl p-2"
@@ -37,7 +37,7 @@ const Nav = () => {
           </li>
           <li className="px-2  cursor-pointer">
             <NavLink
-              to="/chalocard"
+              to="/chalo-card"
               smooth
               duration={500}
               className="mr-3 text-xl  text-white hover:bg-gray-700 rounded-3xl p-2"
@@ -47,7 +47,7 @@ const Nav = () => {
           </li>
           <li className="px-2 cursor-pointer">
             <NavLink
-              to="/mobilepass"
+              to="chalo-app/mobile-pass"
               smooth
               duration={500}
               className="mr-3 text-xl  text-white hover:bg-gray-700 rounded-3xl p-2"
@@ -57,7 +57,7 @@ const Nav = () => {
           </li>
           <li className="px-2 cursor-pointer">
             <NavLink
-              to="/mobileticket"
+              to="chalo-app/mobile-ticket"
               smooth
               duration={500}
               className="mr-3 text-xl  text-white hover:bg-gray-700 rounded-3xl p-2"
@@ -99,7 +99,7 @@ const Nav = () => {
           </li>
           <li className="py-2 text-xl cursor-pointer">
             <NavLink
-              to="/chalocard"
+              to="/chalo-card"
               smooth
               duration={500}
               onClick={() => setNav(false)}
@@ -118,12 +118,12 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className="py-2 text-xl cursor-pointer">
-            <NavLink to="" smooth duration={500} onClick={() => setNav(false)}>
+            <NavLink to="allcities" smooth duration={500} onClick={() => setNav(false)}>
               Chalo Cities
             </NavLink>
           </li>
           <li className="py-2 text-xl cursor-pointer underline">
-            <NavLink to="" smooth duration={500} onClick={() => setNav(false)}>
+            <NavLink to="app-features" smooth duration={500} onClick={() => setNav(false)}>
               Try Chalo
             </NavLink>
           </li>

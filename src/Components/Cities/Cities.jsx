@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Cities = () => {
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
   return (
     <div>
       <div className="px-10 pt-10">
@@ -239,8 +243,10 @@ const Cities = () => {
         </div>
       </div>
      <div className="text-center py-10">
-     <NavLink to="/allcities">
-      <button className="inline-flex items-center border-2 text-black  px-8 py-2  focus:outline-none hover:bg-stone-900 hover:text-white rounded-full  mt-4 md:mt-0">
+     <NavLink to="/allcities" onClick={() => {
+          window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        }}>
+      <button className="inline-flex items-center border-2 text-black  px-8 py-2  focus:outline-none hover:bg-stone-900 hover:text-white rounded-full mt-4 md:mt-0">
         View All Cities
       </button>
       </NavLink>

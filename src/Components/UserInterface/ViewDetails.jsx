@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTicketAlt, FaIdCard, FaTrain, FaBus } from "react-icons/fa";
+import { FaTicketAlt, FaIdCard, FaTrain, FaBus, FaUserAlt } from "react-icons/fa";
 
 const ViewDetails = () => {
   return (
@@ -7,6 +7,10 @@ const ViewDetails = () => {
       <div className=" bg-gray-300 ">
         <div className="">
           <div className="bg-gray-700 absolute z-10 pt-2 pb-8  w-full rounded-b-3xl">
+          <div className=" absolute ml-4 bg-white rounded-full p-2">
+          <FaUserAlt className="text-black"/>
+          </div>
+          
             <h1 className="text-center font-bold text-3xl  text-white">
               Chalo
             </h1>

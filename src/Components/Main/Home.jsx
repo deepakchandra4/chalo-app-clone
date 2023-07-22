@@ -31,7 +31,7 @@ const Home = () => {
             <button className="inline-flex items-center bg-black text-white font-semibold p-4  focus:outline-none hover:bg-gray-100 hover:text-black rounded-3xl text-xl mt-4 md:mt-0">
               Download App
             </button>
-            <NavLink className="mr-5 ml-2 text-black font-semibold text-xl flex  items-center hover:underline decoration-black-500   p-2">
+            <NavLink to="/viewdetails" className="mr-5 ml-2 text-black font-semibold text-xl flex  items-center hover:underline decoration-black-500   p-2">
               Try Chalo
             </NavLink>
           </div>

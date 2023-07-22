@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cities = () => {
+const AllCities = () => {
   return (
     <div>
       <div className="px-10 pt-10">
@@ -8,9 +8,9 @@ const Cities = () => {
           Making Bus Travel Better
         </h2>
         <h1 className="text-4xl font-bold text-center mb-5">
-          Across 52 Cities And Counting
+          Across 52 All Cities And Counting
         </h1>
-        <div className="lg:px-56">
+        <div className="lg:px-56 px-96">
           <p className="text-center px-5 mb-5">
             We offer the Chalo App, the Chalo Card and a host of digital
             products that help make your travel safe, convenient and
@@ -324,4 +324,4 @@ const Cities = () => {
   );
 };
 
-export default Cities;
+export default AllCities;

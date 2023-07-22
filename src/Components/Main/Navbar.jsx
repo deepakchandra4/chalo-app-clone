@@ -18,7 +18,7 @@ const Nav = () => {
                 {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
               </button>
             </div>
-            <NavLink to="/home" smooth duration={500}>
+            <NavLink to="/" smooth duration={500}>
               <h1 className="mt-1 ml-2 text-3xl text-white">Chalo</h1>
             </NavLink>
           </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import SwiperSlider from "../Slider/SwiperSlider";
+import Cities from "../Cities/Cities";
 
 const Home = () => {
   return (
@@ -35,7 +37,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <SwiperSlider/>
+      <Cities/>
     </section>
+
+
+
   );
 };
 

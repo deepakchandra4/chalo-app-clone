@@ -1,26 +1,67 @@
-import React from "react";
-import { FaTicketAlt, FaIdCard, FaTrain, FaBus, FaUserAlt } from "react-icons/fa";
+import React, { useState } from "react";
+import {
+  FaTicketAlt,
+  FaIdCard,
+  FaTrain,
+  FaBus,
+  FaUserAlt,
+} from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const ViewDetails = () => {
+  const [open, setOpen] = useState(true);
+
   return (
     <div>
       <div className=" bg-gray-300 ">
         <div className="">
-          <div className="bg-gray-700 absolute z-10 pt-2 pb-8  w-full rounded-b-3xl">
-          <div className=" absolute ml-4 bg-white rounded-full p-2">
-          <FaUserAlt className="text-black"/>
-          </div>
-          
-            <h1 className="text-center font-bold text-3xl  text-white">
-              Chalo
-            </h1>
-          </div>
-          <div className="px-10 absolute z-30 mt-12 w-full ">
-            <input
-              type="search"
-              className="rounded-3xl w-full p-3 shadow-md shadow-current focus:outline-none "
-              placeholder="Enter destination or bus number"
-            />
+          <div className="bg-gray-700 absolute  pt-2 pb-8  w-full rounded-b-3xl">
+            <div
+              className="absolute bg-white rounded-full p-3 top-2 left-4 cursor-pointer"
+              onClick={() => setOpen(!open)}
+            >
+              <div className="">
+                <FaUserAlt className="text-black text-lg bg-white" />
+                <div className={`${open ? "w-72 " : "hidden"}`}>
+                  <div
+                    className={`z-20 fixed top-0 lg:left-0 h-[99vh] w-9/12 lg:w-80 bg-gray-100 shadow-2xl`}
+                  >
+                    <div className="flex bg-white p-4">
+                      <div className="bg-gray-700 text-white p-4 max-md:p-[-0.25] rounded-full">
+                        <FaUserAlt />
+                      </div>
+                      <div className="ms-2 text-3xl ">
+                        <h1 className="text-md">Sign In/ Register</h1>
+                        <p className="text-sm">To See you ticket pass</p>
+                      </div>
+                    </div>
+                    <ul className="text-xl space-y-5 font-normal mt-6 ps-10 pb-6 bg-white">
+                      <li className="hover:bg-gray-100 pt-2 ">
+                        Your Ticket and Passes
+                      </li>
+                      <li className="hover:bg-gray-100 pt-2">Change City</li>
+                      <li className="hover:bg-gray-100 pt-2">Support</li>
+                      <li className="hover:bg-gray-100 pt-2 ">
+                        Change Language
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="">
+              <h1 className="text-center font-bold text-3xl  text-white">
+                Chalo
+              </h1>
+            </div>
+            <div className="px-10 absolute mt-2 w-full ">
+              <input
+                type="search"
+                className="rounded-3xl w-full p-3 shadow-md shadow-current focus:outline-none "
+                placeholder="Enter destination or bus number"
+              />
+            </div>
           </div>
         </div>
 
@@ -46,18 +87,22 @@ const ViewDetails = () => {
               </span>
             </div>
 
-            <div className="flex gap-10">
-              <div className="bg-slate-100 h-12 w-96 shadow-md rounded-sm hover:shadow-current">
-                <h1 className="p-2 flex">
-                  <FaTicketAlt className="pr-2 text-3xl" /> One Way Ticket
-                </h1>
-              </div>
-              <div className="bg-slate-100 h-12 w-96 shadow-md rounded-sm hover:shadow-current">
-                <h1 className=" p-2 flex ">
-                  <FaIdCard className="pr-2 text-3xl" />
-                  Bus Pass
-                </h1>
-              </div>
+            <div className="lg:flex  lg:gap-10  w-fit">
+              <NavLink to="select-trip">
+                <div className="bg-slate-100 h-12 w-96 max-md:w-72 shadow-md  rounded-sm hover:shadow-current">
+                  <h1 className="p-2 flex">
+                    <FaTicketAlt className="pr-2 text-3xl  " /> One Way Ticket
+                  </h1>
+                </div>
+              </NavLink>
+              <NavLink to="select-product-type">
+                <div className="bg-slate-100 h-12 w-96 max-md:w-72  shadow-md rounded-sm hover:shadow-current">
+                  <h1 className=" p-2 flex ">
+                    <FaIdCard className="pr-2 text-3xl" />
+                    Bus Pass
+                  </h1>
+                </div>
+              </NavLink>
             </div>
           </div>
         </div>

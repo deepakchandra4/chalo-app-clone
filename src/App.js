@@ -13,7 +13,8 @@ import Cities from "./Components/Cities/Cities";
 import AllCities from "./Components/Cities/AllCities";
 import ViewDetails from "./Components/UserInterface/ViewDetails";
 import { useEffect } from "react";
-import SideUserNav from "./Components/UserInterface/SideUserNav";
+import OneWayTicket from "./Components/UserInterface/OneWayTicket";
+import BusPass from "./Components/UserInterface/BusPass";
 
 function App() {
 
@@ -38,7 +39,8 @@ function App() {
       </Routes>
       <Routes>
       <Route path="app-features" element={<ViewDetails/>} />
-      {/* <Route path="side-user-nav" element={<SideUserNav/>} /> */}
+      <Route path="app-features/select-trip" element={<OneWayTicket/>} />
+      <Route path="app-features/select-product-type" element={<BusPass/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

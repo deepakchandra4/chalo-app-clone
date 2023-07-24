@@ -9,23 +9,23 @@ const BusPass = () => {
     }
   return (
     <div className="bg-slate-100">
-      <div className="p-4  shadow-md mb- flex items-center ">
+      <div className="p-4  shadow-md mb- flex items-center  ">
         <FaArrowLeft className=" ml-2 mr-4  text-xl" onClick={goBack} />
         <h1 className="text-xl font-bold">Select Product Type</h1>
       </div>
-      <div className="px-4 py-1">
+      <div className="px-4 py-1 cursor-pointer">
         <div className="shadow-lg p-4">
           <h1 className="text-lg font-medium"> Super Saver plan</h1>
           <p className="text-sm">Cheapest way to travel</p>
         </div>
       </div>
-      <div className="px-4 py-3 ">
+      <div className="px-4 py-3 cursor-pointer">
         <div className="shadow-lg p-4">
           <h1 className="text-lg font-medium"> One Day Ticket</h1>
           <p className="text-sm">Enjoy unlimited rides in a day with a day ticket</p>
         </div>
       </div>
-      <div className="px-4 py-3 ">
+      <div className="px-4 py-3 cursor-pointer ">
         <div className="  shadow-lg p-4">
           <h1 className="text-lg font-medium"> Bus Pass</h1>
           <p className="text-sm">Monthly passes for general and special categories (students, senior citizens etc.)</p>

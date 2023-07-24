@@ -15,7 +15,7 @@ import ViewDetails from "./Components/UserInterface/ViewDetails";
 import { useEffect } from "react";
 import BusPass from "./Components/UserInterface/BusPass";
 import OneWayTicket from './Components/UserInterface/OneWayTicket'
-import HideNavbar from "./Components/HidePages/HidePages";
+import HidePage from "./Components/HidePages/HidePages";
 
 function App() {
     
@@ -26,9 +26,9 @@ function App() {
   return (
     <BrowserRouter>
 
-      <HideNavbar>
+      <HidePage>
         <Navbar/>
-      </HideNavbar>
+      </HidePage>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="chalo-app" element={<ChaloApp />} />
@@ -46,9 +46,9 @@ function App() {
       <Route path="app-features/select-trip" element={<OneWayTicket/>} />
       <Route path="app-features/select-product-type" element={<BusPass/>} />
       </Routes>
-     <HideNavbar>
+     <HidePage>
      <Footer />
-     </HideNavbar>
+     </HidePage>
     </BrowserRouter>
   );
 }

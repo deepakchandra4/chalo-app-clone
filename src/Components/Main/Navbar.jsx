@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
@@ -68,18 +68,9 @@ const Nav = () => {
         </ul>
 
         <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0 gap-2">
-          <Link className="py-2 text-xl cursor-pointer underline text-white hidden md:flex">
-            <NavLink
-              to="app-features"
-              smooth
-              duration={500}
-              onClick={() => setNav(false)}
-            >
-              Try Chalo
-            </NavLink>
-          </Link>
+          
           <NavLink to="/signup">
-            <button className=" items-center hidden md:flex bg-gray-100 font-semibold py-2 px-3 text-black focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
+            <button className=" items-center hidden md:flex bg-gray-100 font-semibold py-2 px-3 text focus:outline-none hover:bg-gray-300 rounded-3xl text-base mt-3 md:mt-0">
               Login/Signup
             </button>
           </NavLink>

@@ -3,7 +3,7 @@ import Footer from "./Components/Main/Footer";
 import Home from "./Components/Main/Home";
 import Navbar from "./Components/Main/Navbar";
 import ChaloApp from "./Components/Pages/ChaloApp";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ChaloCard from "./Components/Pages/ChaloCard";
 import Mobilepass from "./Components/Pages/Mobilepass";
 import MobileTicket from "./Components/Pages/MobileTicket";
@@ -13,11 +13,11 @@ import Cities from "./Components/Cities/Cities";
 import AllCities from "./Components/Cities/AllCities";
 import ViewDetails from "./Components/UserInterface/ViewDetails";
 import { useEffect } from "react";
-import OneWayTicket from "./Components/UserInterface/OneWayTicket";
 import BusPass from "./Components/UserInterface/BusPass";
+import OneWayTicket from './Components/UserInterface/OneWayTicket'
+import HideNavbar from "./Components/HidePages/HidePages";
 
 function App() {
-
     
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -25,7 +25,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
+
+      <HideNavbar>
+        <Navbar/>
+      </HideNavbar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="chalo-app" element={<ChaloApp />} />
@@ -38,11 +41,14 @@ function App() {
         <Route path="allcities"  element={<AllCities />} />
       </Routes>
       <Routes>
+        
       <Route path="app-features" element={<ViewDetails/>} />
       <Route path="app-features/select-trip" element={<OneWayTicket/>} />
       <Route path="app-features/select-product-type" element={<BusPass/>} />
       </Routes>
-      <Footer />
+     <HideNavbar>
+     <Footer />
+     </HideNavbar>
     </BrowserRouter>
   );
 }

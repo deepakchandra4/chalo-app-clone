@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaTicketAlt,
   FaIdCard,
@@ -9,6 +9,10 @@ import {
 import { NavLink } from "react-router-dom";
 
 const ViewDetails = () => {
+  useEffect(() => {
+    setOpen(false);
+  }, []);
+
   const [open, setOpen] = useState(true);
 
   return (
@@ -17,7 +21,7 @@ const ViewDetails = () => {
         <div className="">
           <div className="bg-gray-700 absolute  pt-2 pb-8  w-full rounded-b-3xl">
             <div
-              className="absolute bg-white rounded-full p-3 top-2 left-4 cursor-pointer"
+              className="absolute bg-white rounded-full p-3 top-2 left-4 cursor-pointer "
               onClick={() => setOpen(!open)}
             >
               <div className="">

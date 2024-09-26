@@ -1,4 +1,4 @@
-Check Live here : https://mellifluous-fairy-293769.netlify.app/
+Check Live here : https://chalo-app-clone.vercel.app/
 
 # Getting Started with Create React App
 
